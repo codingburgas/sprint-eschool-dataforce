@@ -1,10 +1,10 @@
-<h1 align="center">Data Force</h1>
+<h1 align="center">📈👩🏽‍💻Data Force🧑🏽‍💻📉</h1>
 
 <div align="center">
   logo
 </div>
 
-## About Our Program
+## About Our Program💻
 The idea of ​​our e-school is to provide students with interactive worksheets, PDF files with materials published by teachers, and an overview of GPA and grades. Teachers will have the ability to add and delete grades and add materials.
 
 <br>
@@ -16,11 +16,11 @@ Used code editor & collaborative service:
  <a href="https://github.com/"><img src="https://img.icons8.com/nolan/344/github.png" alt="GitHub logo" width=52px /></a>
 <a href="https://git-scm.com/"><img src="https://img.icons8.com/nolan/344/git.png" alt="git logo" width=52px /></a>
 </p>
--Design
+-Design👩🏽‍💻
 <p align="left">
     <a href="https://www.figma.com/"><img src="https://img.icons8.com/color/344/figma--v1.png" alt="Figma logo" width=48px/></a>
 </p>
- -Game
+ -Game👾
 <p align="left">
    <img src="https://skillicons.dev/icons?i=qt,cpp"/>
 </p>
@@ -32,13 +32,13 @@ Used code editor & collaborative service:
     <a href="https://www.microsoft.com/en/microsoft-teams/group-chat-software"><img src="https://img.icons8.com/color/344/microsoft-teams.png" alt = "MS Teams logo" width=46px /></a>
 </p>
 <hr>
--Installation
+-Installation📥
 
 If you want to clone our repo locally you can paste the following command in your preferred terminal:
 
 <pre>https://github.com/codingburgas/sprint-eschool-dataforce.git</pre>
 <hr>
- -🧒 Our Team<br>
+ -👩🏽‍💻👩🏽‍💻Our Team👩🏽‍💻🧑🏽‍💻<br>
 - <a href = "https://github.com/VMDamyanova23"> Valeria Damyanova </a> (Scrum trainer)<br>
 - <a href = "https://github.com/VVValchanova23"> Valeria Vulchanova </a> (Frontend Developer)<br>
 - <a href = "https://github.com/AYAAtanasov23"> Aleksey Atanasov</a> (Backend  Developer)<br>
