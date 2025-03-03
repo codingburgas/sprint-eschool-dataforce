@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BLL", "BLL\BLL.vcxproj", "{90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAL", "DAL\DAL.vcxproj", "{B324A163-8B86-461B-BBA2-16725DE4E273}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PL", "PL\PL.vcxproj", "{5EFB14CC-8707-45DA-BAD5-EDAE922B4574}"
+	ProjectSection(ProjectDependencies) = postProject
+		{90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018} = {90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018}.Debug|x64.ActiveCfg = Debug|x64
+		{90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018}.Debug|x64.Build.0 = Debug|x64
+		{90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018}.Release|x64.ActiveCfg = Release|x64
+		{90E0B59A-3FF1-4BCF-89C4-6A2E9A1DD018}.Release|x64.Build.0 = Release|x64
+		{B324A163-8B86-461B-BBA2-16725DE4E273}.Debug|x64.ActiveCfg = Debug|x64
+		{B324A163-8B86-461B-BBA2-16725DE4E273}.Debug|x64.Build.0 = Debug|x64
+		{B324A163-8B86-461B-BBA2-16725DE4E273}.Release|x64.ActiveCfg = Release|x64
+		{B324A163-8B86-461B-BBA2-16725DE4E273}.Release|x64.Build.0 = Release|x64
+		{5EFB14CC-8707-45DA-BAD5-EDAE922B4574}.Debug|x64.ActiveCfg = Debug|x64
+		{5EFB14CC-8707-45DA-BAD5-EDAE922B4574}.Debug|x64.Build.0 = Debug|x64
+		{5EFB14CC-8707-45DA-BAD5-EDAE922B4574}.Release|x64.ActiveCfg = Release|x64
+		{5EFB14CC-8707-45DA-BAD5-EDAE922B4574}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {142D43F8-9DE6-4263-B349-A6491E3D7CFB}
+	EndGlobalSection
+EndGlobal
