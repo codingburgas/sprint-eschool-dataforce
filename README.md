@@ -1,12 +1,12 @@
 <h1 align="center">📈👩🏽‍💻Data Force🧑🏽‍💻📉</h1>
 
 <div align="center">
-  logo
+    <img src="https://github.com/codingburgas/sprint-eschool-dataforce/blob/main/logo.png" alt="Logo" width="300"/>
 </div>
 
 ## About Our Program💻
 The idea of ​​our e-school is to provide students with interactive worksheets, PDF files with materials published by teachers, and an overview of GPA and grades. Teachers will have the ability to add and delete grades and add materials.
-
+  <
 <br>
 <hr>
 -Tech Stack
