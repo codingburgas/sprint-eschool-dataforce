@@ -2,7 +2,7 @@
 
 #include "../DAL/student.h"
 
-class StudentManager 
+class StudentService 
 {
 public:
     static std::vector<Student> getAllStudents();

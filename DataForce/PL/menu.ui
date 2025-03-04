@@ -80,8 +80,7 @@ border-color: rgb(0, 0, 0);
        background-color: rgb(250, 255, 74);
        border: 1px;
        border-color: rgb(0, 0, 0);
-       border-radius: 14px;
-   </string>
+       border-radius: 14px;  </string>
     </property>
     <property name="text">
      <string>Tests</string>
@@ -126,7 +125,7 @@ border-color: rgb(0, 0, 0);
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>18</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

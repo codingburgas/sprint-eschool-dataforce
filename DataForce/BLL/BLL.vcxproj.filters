@@ -23,18 +23,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="studentManager.h">
+    <ClInclude Include="studentService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="teacherManager.h">
+    <ClInclude Include="teacherService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="userService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="studentManager.cpp">
+    <ClCompile Include="studentService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="teacherManager.cpp">
+    <ClCompile Include="teacherService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="userService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,7 +2,7 @@
 #include "../DAL/teacher.h"
 #include <vector>
 
-class TeacherManager {
+class TeacherService {
 public:
     static std::vector<Teacher> getAllTeachers();
     static void addTeacher(const Teacher& teacher);

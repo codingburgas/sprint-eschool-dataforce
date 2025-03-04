@@ -1,17 +1,17 @@
-#include "studentManager.h"
+#include "studentService.h"
 
-std::vector<Student> StudentManager::getAllStudents() 
+std::vector<Student> StudentService::getAllStudents() 
 {
     return Student::readFromFile("students.txt");
 }
 
-void StudentManager::addStudent(const Student& student) {
+void StudentService::addStudent(const Student& student) {
     std::vector<Student> students = Student::readFromFile("students.txt");
     students.push_back(student);
     Student::writeToFile("students.txt", students);
 }
 
-void StudentManager::updateStudent(int studentID, const Student& student) {
+void StudentService::updateStudent(int studentID, const Student& student) {
     std::vector<Student> students = Student::readFromFile("students.txt");
     for (auto& s : students) {
         if (s.StudentID == studentID) {
@@ -22,7 +22,7 @@ void StudentManager::updateStudent(int studentID, const Student& student) {
     Student::writeToFile("students.txt", students);
 }
 
-void StudentManager::removeStudent(int studentID) {
+void StudentService::removeStudent(int studentID) {
     std::vector<Student> students = Student::readFromFile("students.txt");
     students.erase(std::remove_if(students.begin(), students.end(),
         [studentID](const Student& s) { return s.StudentID == studentID; }),

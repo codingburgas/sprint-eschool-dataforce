@@ -99,12 +99,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="studentManager.h" />
-    <ClInclude Include="teacherManager.h" />
+    <ClInclude Include="studentService.h" />
+    <ClInclude Include="teacherService.h" />
+    <ClInclude Include="userService.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="studentManager.cpp" />
-    <ClCompile Include="teacherManager.cpp" />
+    <ClCompile Include="studentService.cpp" />
+    <ClCompile Include="teacherService.cpp" />
+    <ClCompile Include="userService.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

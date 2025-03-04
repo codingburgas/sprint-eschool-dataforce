@@ -1,17 +1,17 @@
-#include "teacherManager.h"
+#include "teacherService.h"
 #include "../DAL/teacher.h"
 
-std::vector<Teacher> TeacherManager::getAllTeachers() {
+std::vector<Teacher> TeacherService::getAllTeachers() {
     return Teacher::readFromFile("teachers.txt");
 }
 
-void TeacherManager::addTeacher(const Teacher& teacher) {
+void TeacherService::addTeacher(const Teacher& teacher) {
     std::vector<Teacher> teachers = Teacher::readFromFile("teachers.txt");
     teachers.push_back(teacher);
     Teacher::writeToFile("teachers.txt", teachers);
 }
 
-void TeacherManager::updateTeacher(int teacherID, const Teacher& teacher) {
+void TeacherService::updateTeacher(int teacherID, const Teacher& teacher) {
     std::vector<Teacher> teachers = Teacher::readFromFile("teachers.txt");
     for (auto& t : teachers) {
         if (t.TeacherID == teacherID) {
@@ -22,7 +22,7 @@ void TeacherManager::updateTeacher(int teacherID, const Teacher& teacher) {
     Teacher::writeToFile("teachers.txt", teachers);
 }
 
-void TeacherManager::removeTeacher(int teacherID) {
+void TeacherService::removeTeacher(int teacherID) {
     std::vector<Teacher> teachers = Teacher::readFromFile("teachers.txt");
     teachers.erase(std::remove_if(teachers.begin(), teachers.end(),
         [teacherID](const Teacher& t) { return t.TeacherID == teacherID; }),

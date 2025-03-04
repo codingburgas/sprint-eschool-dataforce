@@ -26,13 +26,13 @@
     <QtRcc Include="PL.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="PL.ui">
+    <QtUic Include="menu.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="PL.h">
+    <QtMoc Include="menu.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="PL.cpp">
+    <ClCompile Include="menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <None Include="PL.ico">
@@ -46,5 +46,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="login.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="diary.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="diary.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

@@ -1,19 +1,19 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include "ui_PL.h"
+#include "ui_Menu.h"
 
-class PL : public QMainWindow
+class Menu : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    PL(QWidget *parent = nullptr);
-    ~PL();
+    Menu(QWidget *parent = nullptr);
+    ~Menu();
 
 private slots:
     void onDiaryButtonClicked();
 
 private:
-    Ui::PLClass ui;
+    Ui::Menu* ui;
 };

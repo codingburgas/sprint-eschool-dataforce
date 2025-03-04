@@ -93,12 +93,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="PL.qrc" />
-    <QtUic Include="PL.ui" />
-    <QtMoc Include="PL.h" />
-    <ClCompile Include="PL.cpp" />
+    <QtUic Include="diary.ui" />
+    <QtUic Include="login.ui" />
+    <QtUic Include="menu.ui" />
+    <QtMoc Include="menu.h" />
+    <ClCompile Include="diary.cpp" />
+    <ClCompile Include="login.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="main.cpp" />
     <None Include="PL.ico" />
     <ResourceCompile Include="PL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="login.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="diary.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.vcxproj">
+      <Project>{90e0b59a-3ff1-4bcf-89c4-6a2e9a1dd018}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
