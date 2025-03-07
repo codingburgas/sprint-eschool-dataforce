@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>511</width>
+    <height>366</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,96 +26,121 @@
    <string>DataForce</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(6, 57, 112);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QPushButton" name="resourcesButton">
+   <widget class="QLabel" name="background">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>300</y>
-      <width>200</width>
-      <height>51</height>
+      <x>-20</x>
+      <y>-20</y>
+      <width>631</width>
+      <height>401</height>
      </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;Segoe UI&quot;;
-border-color: rgb(0, 0, 0);
-       color: rgb(0, 0, 0);
-       background-color: rgb(250, 255, 74);
-       border: 1px;
-       border-color: rgb(0, 0, 0);
-       border-radius: 14px;
-   </string>
     </property>
     <property name="text">
-     <string>Resources</string>
+     <string/>
     </property>
-    <property name="checkable">
-     <bool>false</bool>
+    <property name="pixmap">
+     <pixmap>images/menu_background.jpg</pixmap>
     </property>
    </widget>
-   <widget class="QPushButton" name="testsButton">
+   <widget class="QLabel" name="Name">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>300</y>
-      <width>200</width>
-      <height>51</height>
+      <x>110</x>
+      <y>80</y>
+      <width>311</width>
+      <height>91</height>
      </rect>
     </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
+    <property name="font">
+     <font>
+      <family>Sylfaen</family>
+      <pointsize>50</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;Segoe UI&quot;;
-border-color: rgb(0, 0, 0);
-       color: rgb(0, 0, 0);
-       background-color: rgb(250, 255, 74);
-       border: 1px;
-       border-color: rgb(0, 0, 0);
-       border-radius: 14px;  </string>
+     <string notr="true">color: rgb(255, 255, 255);
+font: 50pt &quot;Sylfaen&quot;;</string>
     </property>
     <property name="text">
-     <string>Tests</string>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
+     <string>DATAFORCE</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="diaryButton">
+   <widget class="QPushButton" name="resourses">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>300</y>
-      <width>200</width>
-      <height>51</height>
+      <x>60</x>
+      <y>190</y>
+      <width>111</width>
+      <height>31</height>
      </rect>
     </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(232, 200, 219);
+font: 12pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Resourses</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="diary">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>190</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;Segoe UI&quot;;
-border-color: rgb(0, 0, 0);
-       color: rgb(0, 0, 0);
-       background-color: rgb(250, 255, 74);
-       border: 1px;
-       border-color: rgb(0, 0, 0);
-       border-radius: 14px;
-   </string>
+     <string notr="true">background-color: rgb(232, 200, 219);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
      <string>Diary</string>
     </property>
-    <property name="checkable">
-     <bool>false</bool>
+   </widget>
+   <widget class="QPushButton" name="tests">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>190</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(232, 200, 219);
+font: 12pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Tests</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="onlineschool">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>150</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>online school</string>
     </property>
    </widget>
   </widget>
@@ -124,8 +149,8 @@ border-color: rgb(0, 0, 0);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>511</width>
+     <height>17</height>
     </rect>
    </property>
   </widget>
