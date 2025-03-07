@@ -3,10 +3,10 @@
 #include <QTextStream>
 #include <QDebug>
 
-std::vector<Teacher> Teacher::readFromFile(const QString& filename) 
+QVector<Teacher> Teacher::readFromFile()
 {
-    std::vector<Teacher> teachers;
-    QFile file(filename);
+    QVector<Teacher> teachers = {};
+    QFile file("../DAL/data/teachers.txt");
 
     if (file.open(QIODevice::ReadOnly)) 
     {
@@ -20,11 +20,12 @@ std::vector<Teacher> Teacher::readFromFile(const QString& filename)
             if (fields.size() == 5) 
             {
                 Teacher teacher;
-                teacher.TeacherID = fields[0].toInt();
+                teacher.TeacherId = fields[0].toInt();
                 teacher.FirstName = fields[1];
                 teacher.LastName = fields[2];
                 teacher.Subject = fields[3];
-                teacher.Class = fields[4];
+                teacher.UserId = fields[4].toInt();
+
                 teachers.push_back(teacher);
             }
         }
@@ -37,22 +38,22 @@ std::vector<Teacher> Teacher::readFromFile(const QString& filename)
     return teachers;
 }
 
-void Teacher::writeToFile(const QString& filename, const std::vector<Teacher>& teachers) 
+void Teacher::writeToFile(const QVector<Teacher>& teachers) 
 {
-    QFile file(filename);
+    QFile file("../DAL/data/teachers.txt");
 
     if (file.open(QIODevice::WriteOnly)) 
     {
         QTextStream out(&file);
-        out << "TeacherID,FirstName,LastName,Subject,Class\n";
+        out << "TeacherId,FirstName,LastName,Subject,UserId\n";
 
         for (const Teacher& teacher : teachers) 
         {
-            out << teacher.TeacherID << ","
+            out << teacher.TeacherId << ","
                 << teacher.FirstName << ","
                 << teacher.LastName << ","
                 << teacher.Subject << ","
-                << teacher.Class << "\n";
+                << teacher.UserId << "\n";
         }
         file.close();
     }

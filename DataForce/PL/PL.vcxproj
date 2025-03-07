@@ -92,28 +92,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="studentDiary.cpp" />
+    <ClCompile Include="studentTests.cpp" />
+    <ClCompile Include="teacherDiary.cpp" />
     <QtRcc Include="PL.qrc" />
-    <QtUic Include="diary.ui" />
     <QtUic Include="login.ui" />
     <QtUic Include="menu.ui" />
     <QtMoc Include="menu.h" />
-    <ClCompile Include="diary.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="main.cpp" />
     <None Include="PL.ico" />
+    <QtUic Include="studentDiary.ui" />
+    <QtUic Include="studentTests.ui" />
+    <QtUic Include="teacherDiary.ui" />
     <ResourceCompile Include="PL.rc" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="login.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="diary.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.vcxproj">
       <Project>{90e0b59a-3ff1-4bcf-89c4-6a2e9a1dd018}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="studentDiary.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="teacherDiary.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="studentTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

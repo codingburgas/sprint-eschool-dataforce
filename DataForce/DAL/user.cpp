@@ -17,16 +17,16 @@ QVector<User> User::readFromFile()
         {
             QString line = in.readLine();
             QStringList fields = line.split(",");
-            if (fields.size() == 4) 
+            if (fields.size() == 5) 
             {
                 User user;
                 user.UserId = fields[0].toInt();
                 user.Username = fields[1];
                 user.Password = fields[2];
                 user.Role = fields[3];
+                user.Class = fields[4];
 
                 users.push_back(user);
-                qDebug() << user.UserId;
             }
         }
         file.close();
@@ -41,17 +41,18 @@ QVector<User> User::readFromFile()
 
 void User::writeToFile(const QVector<User>& users)
 {
-    QFile file("data/users.txt");
+    QFile file("../DAL/data/users.txt");
 
     if (file.open(QIODevice::WriteOnly)) {
         QTextStream out(&file);
-        out << "UserId,Username,Password,Role\n";
+        out << "UserId,Username,Password,Role,Class\n";
 
         for (const User& user : users) {
             out << user.UserId << ","
                 << user.Username << ","
                 << user.Password << ","
-                << user.Role << "\n";
+                << user.Role << ","
+                << user.Class << "\n";
         }
         file.close();
     }

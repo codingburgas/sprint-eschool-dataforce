@@ -1,5 +1,4 @@
 #include "login.h"
-#include "../BLL/userService.h"
 
 Login::Login(QWidget *parent) : QMainWindow(parent), ui(new Ui::LoginClass)
 {
@@ -15,11 +14,9 @@ void Login::checkLogin() {
     QString username = ui->usernameInput->text();
     QString password = ui->passwordInput->text();
 
-    qDebug() << username << password;
-
     if (UserService::validateUser(username, password))
     {
-        QMessageBox::information(this, "Login Successful", "Welcome, " + username + "!");
+        QMessageBox::information(this, "Login Successful", "Welcome, " + CurrentUser::username + "!");
 
         if (!menuWindow)
         {

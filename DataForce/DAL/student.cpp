@@ -3,25 +3,29 @@
 #include <QTextStream>
 #include <QDebug>
 
-std::vector<Student> Student::readFromFile(const QString& filename) {
-    std::vector<Student> students;
-    QFile file(filename);
+QVector<Student> Student::readFromFile() 
+{
+    QVector<Student> students = {};
+    QFile file("../DAL/data/students.txt");
 
-    if (file.open(QIODevice::ReadOnly)) {
+    if (file.open(QIODevice::ReadOnly)) 
+    {
         QTextStream in(&file);
         in.readLine(); // Skip header line
 
-        while (!in.atEnd()) {
+        while (!in.atEnd()) 
+        {
             QString line = in.readLine();
             QStringList fields = line.split(",");
-            if (fields.size() == 6) {
+
+            if (fields.size() == 4) 
+            {
                 Student student;
-                student.StudentID = fields[0].toInt();
+                student.StudentId = fields[0].toInt();
                 student.FirstName = fields[1];
                 student.LastName = fields[2];
-                student.DateOfBirth = fields[3];
-                student.Class = fields[4];
-                student.TeacherID = fields[5].toInt();
+                student.UserId = fields[3].toInt();
+
                 students.push_back(student);
             }
         }
@@ -33,20 +37,19 @@ std::vector<Student> Student::readFromFile(const QString& filename) {
     return students;
 }
 
-void Student::writeToFile(const QString& filename, const std::vector<Student>& students) {
-    QFile file(filename);
+void Student::writeToFile(const QVector<Student>& students) {
+    QFile file("../DAL/data/students.txt");
 
     if (file.open(QIODevice::WriteOnly)) {
         QTextStream out(&file);
-        out << "StudentID,FirstName,LastName,DateOfBirth,Class,TeacherID\n";
+        out << "StudentId,FirstName,LastName,UserId\n";
 
-        for (const Student& student : students) {
-            out << student.StudentID << ","
+        for (const Student& student : students) 
+        {
+            out << student.StudentId << ","
                 << student.FirstName << ","
                 << student.LastName << ","
-                << student.DateOfBirth << ","
-                << student.Class << ","
-                << student.TeacherID << "\n";
+                << student.UserId << "\n";
         }
         file.close();
     }

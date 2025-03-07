@@ -1,3 +1,18 @@
-GradeID,StudentID,TestID,Grade
-1,1,1,A
-2,2,2,B
+GradeId,StudentId,TeacherId,GradeValue
+1,1,1,Math 101,A
+2,1,1,Math 101,B
+3,1,1,Math 101,C
+4,1,1,Math 101,C
+5,1,1,Math 101,C
+6,1,1,Math 101,D
+7,1,1,Math 101,B
+8,1,1,Math 101,C
+9,1,1,Math 101,A
+10,1,1,Math 101,D
+11,2,1,Math 101,A
+12,1,1,Math 101,C
+13,2,1,Math 101,D
+14,2,1,Math 101,A
+15,2,1,Math 101,A
+16,1,1,Math 101,F
+17,2,1,Math 101,B

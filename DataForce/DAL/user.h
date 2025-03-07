@@ -10,6 +10,7 @@ public:
     QString Username;
     QString Password;
     QString Role;
+    QString Class;
 
     static QVector<User> readFromFile();
     static void writeToFile(const QVector<User>& users);

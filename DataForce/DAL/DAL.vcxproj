@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="grade.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="teacher.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="grade.cpp" />
     <ClCompile Include="student.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="teacher.cpp" />

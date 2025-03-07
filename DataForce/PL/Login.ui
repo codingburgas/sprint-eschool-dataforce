@@ -35,8 +35,8 @@
    <widget class="QLabel" name="background">
     <property name="geometry">
      <rect>
-      <x>-60</x>
-      <y>-70</y>
+      <x>-10</x>
+      <y>-60</y>
       <width>751</width>
       <height>621</height>
      </rect>
@@ -48,17 +48,20 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../../OneDrive/Desktop/Leri/photos/login_bg.jpg</pixmap>
+     <pixmap>images/background.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QGroupBox" name="registerbox">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>80</y>
+      <x>230</x>
+      <y>90</y>
       <width>291</width>
       <height>331</height>
      </rect>
@@ -80,41 +83,34 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="username">
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <widget class="QLabel" name="usernameLabel">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>130</y>
-       <width>71</width>
+       <y>139</y>
+       <width>101</width>
        <height>21</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>14</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 14pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
       <string>Username:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="question">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>100</y>
-       <width>121</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 11pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Dont have an account?</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="usernameInput">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -123,25 +119,38 @@ font: 11pt &quot;Segoe UI&quot;;</string>
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0,0,0);</string>
+     </property>
+     <property name="text">
+      <string>alexander</string>
+     </property>
     </widget>
-    <widget class="QLabel" name="password">
+    <widget class="QLabel" name="passwordLabel">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>200</y>
-       <width>71</width>
+       <y>209</y>
+       <width>101</width>
        <height>21</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>14</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 14pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
       <string>Password:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="passwordInput">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -149,6 +158,15 @@ font: 14pt &quot;Segoe UI&quot;;</string>
        <width>231</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0,0,0);</string>
+     </property>
+     <property name="text">
+      <string>12345</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
      </property>
     </widget>
     <widget class="QLabel" name="logo">
@@ -164,62 +182,290 @@ font: 14pt &quot;Segoe UI&quot;;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../DataForce/logo.png</pixmap>
+      <pixmap>images/logo.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="login_2">
+    <widget class="QLabel" name="loginTitle">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>60</y>
-       <width>51</width>
-       <height>31</height>
+       <x>109</x>
+       <y>56</y>
+       <width>101</width>
+       <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 20pt &quot;Times New Roman&quot;;</string>
+      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
       <string>Login</string>
      </property>
     </widget>
-    <widget class="QLabel" name="signup">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>100</y>
-       <width>51</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(15, 26, 178);
-font: 11pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Sign Up</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="loginbutton">
+    <widget class="QPushButton" name="loginButton">
      <property name="geometry">
       <rect>
        <x>100</x>
        <y>280</y>
        <width>91</width>
-       <height>21</height>
+       <height>33</height>
       </rect>
      </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>91</width>
+       <height>33</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>91</width>
+       <height>33</height>
+      </size>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>59</red>
+           <green>110</green>
+           <blue>187</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>11</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(59, 110, 187);
-color: rgb(0, 0, 0);
-font: 11pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">QPushButton:hover {
+	background-color: rgb(159, 110, 187);
+}
+
+QPushButton {
+	background-color: rgb(59, 110, 187);
+	color: rgb(0, 0, 0);
+}
+</string>
      </property>
      <property name="text">
       <string>Log in</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>

@@ -1,3 +1,6 @@
-StudentID,FirstName,LastName,DateOfBirth,Class,TeacherID
-1,Alexander,Basil,2007-06-15,Math 101,1
-2,Iris,Basil,2008-08-21,Science 101,2
+StudentId,FirstName,LastName,UserId
+1,John,Basil,2
+2,Hakan,Chandar,2
+3,Ivan,Tsrangalov,4
+4,Rosen,Labchev,6
+5,Sisi,Monroe,8

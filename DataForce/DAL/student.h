@@ -1,16 +1,14 @@
 #pragma once
 #include <QString>
-#include <vector>
+#include <QVector>
 
 class Student {
 public:
-    int StudentID;
+    int StudentId;
     QString FirstName;
     QString LastName;
-    QString DateOfBirth;
-    QString Class;
-    int TeacherID;
+    int UserId;
 
-    static std::vector<Student> readFromFile(const QString& filename);
-    static void writeToFile(const QString& filename, const std::vector<Student>& students);
+    static QVector<Student> readFromFile();
+    static void writeToFile(const QVector<Student>& students);
 };

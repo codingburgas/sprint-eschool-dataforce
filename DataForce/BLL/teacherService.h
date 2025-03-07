@@ -1,11 +1,13 @@
 #pragma once
 #include "../DAL/teacher.h"
-#include <vector>
+#include "userService.h"
 
 class TeacherService {
 public:
-    static std::vector<Teacher> getAllTeachers();
+    static QVector<Teacher> getAllTeachers();
     static void addTeacher(const Teacher& teacher);
-    static void updateTeacher(int teacherID, const Teacher& teacher);
-    static void removeTeacher(int teacherID);
+    static void updateTeacher(int teacherId, const Teacher& teacher);
+    static void removeTeacher(int teacherId);
+    static Teacher getTeacherById(int teacherId);
+    static Teacher getTeacherByUserId(int usedId);
 };

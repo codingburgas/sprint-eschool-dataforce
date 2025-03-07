@@ -14,13 +14,13 @@ public:
 	~Login();
 
 private slots:
-	void checkLogin();  // Function to validate login
+	void checkLogin();
 
 private:
 	Ui::LoginClass* ui;
-	Menu* menuWindow;
+	QWidget* menuWindow;
 
 	QLineEdit* usernameField;
 	QLineEdit* passwordField;
-	QPushButton* loginButton;
+	QPushButton* buttonLogin;
 };
