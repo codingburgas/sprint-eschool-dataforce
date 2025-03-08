@@ -5,7 +5,8 @@
 #include "../BLL/userService.h"
 #include "studentDiary.h"
 #include "teacherDiary.h"
-#include "studentTests.h"
+#include "studentResources.h"
+#include "teacherResources.h"
 
 class Menu : public QMainWindow
 {
@@ -30,5 +31,6 @@ private:
     StudentDiary* studentDiaryWindow;
     TeacherDiary* teacherDiaryWindow;
 
-    StudentTests* studentTestsWindow;
+    StudentResources* studentResourcesWindow;
+    TeacherResources* teacherResourcesWindow;
 };

@@ -37,7 +37,7 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.8.2_msvc2022_64</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;widgets;webchannel;webenginecore;webenginewidgets;webenginequick</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
@@ -93,8 +93,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="studentDiary.cpp" />
-    <ClCompile Include="studentTests.cpp" />
+    <ClCompile Include="studentResources.cpp" />
     <ClCompile Include="teacherDiary.cpp" />
+    <ClCompile Include="teacherResources.cpp" />
     <QtRcc Include="PL.qrc" />
     <QtUic Include="login.ui" />
     <QtUic Include="menu.ui" />
@@ -104,8 +105,9 @@
     <ClCompile Include="main.cpp" />
     <None Include="PL.ico" />
     <QtUic Include="studentDiary.ui" />
-    <QtUic Include="studentTests.ui" />
+    <QtUic Include="studentResources.ui" />
     <QtUic Include="teacherDiary.ui" />
+    <QtUic Include="teacherResources.ui" />
     <ResourceCompile Include="PL.rc" />
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +125,10 @@
     <QtMoc Include="teacherDiary.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="studentTests.h" />
+    <QtMoc Include="studentResources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="teacherResources.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

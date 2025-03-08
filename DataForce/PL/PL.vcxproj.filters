@@ -55,7 +55,10 @@
     <ClCompile Include="teacherDiary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="studentTests.cpp">
+    <ClCompile Include="studentResources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="teacherResources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,7 +72,10 @@
     <QtMoc Include="teacherDiary.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="studentTests.h">
+    <QtMoc Include="studentResources.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="teacherResources.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -83,7 +89,10 @@
     <QtUic Include="teacherDiary.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="studentTests.ui">
+    <QtUic Include="studentResources.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="teacherResources.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

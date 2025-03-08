@@ -44,12 +44,22 @@ void Menu::onTestsButtonClicked()
 {
     if (CurrentUser::role == "student")
     {
-        if (!studentDiaryWindow)
+        if (!studentResourcesWindow)
         {
-            studentDiaryWindow = new StudentDiary(this);
+            studentResourcesWindow = new StudentResources(this);
         }
 
-        studentDiaryWindow->show();
+        studentResourcesWindow->show();
+        this->hide();
+    }
+    else if (CurrentUser::role == "teacher")
+    {
+        if (!teacherDiaryWindow)
+        {
+            teacherResourcesWindow = new TeacherResources(this);
+        }
+
+        teacherResourcesWindow->show();
         this->hide();
     }
 }
