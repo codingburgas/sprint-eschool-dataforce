@@ -94,8 +94,11 @@
   <ItemGroup>
     <ClCompile Include="studentDiary.cpp" />
     <ClCompile Include="studentResources.cpp" />
+    <ClCompile Include="studentTestWindow.cpp" />
     <ClCompile Include="teacherDiary.cpp" />
     <ClCompile Include="teacherResources.cpp" />
+    <ClCompile Include="testsMenu.cpp" />
+    <ClCompile Include="teacherTestWindow.cpp" />
     <QtRcc Include="PL.qrc" />
     <QtUic Include="login.ui" />
     <QtUic Include="menu.ui" />
@@ -106,8 +109,11 @@
     <None Include="PL.ico" />
     <QtUic Include="studentDiary.ui" />
     <QtUic Include="studentResources.ui" />
+    <QtUic Include="studentTestWindow.ui" />
     <QtUic Include="teacherDiary.ui" />
     <QtUic Include="teacherResources.ui" />
+    <QtUic Include="testsMenu.ui" />
+    <QtUic Include="teacherTestWindow.ui" />
     <ResourceCompile Include="PL.rc" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +135,15 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="teacherResources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="testsMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="teacherTestWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="studentTestWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

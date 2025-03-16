@@ -7,6 +7,7 @@
 #include "teacherDiary.h"
 #include "studentResources.h"
 #include "teacherResources.h"
+#include <testsMenu.h>
 
 class Menu : public QMainWindow
 {
@@ -33,4 +34,7 @@ private:
 
     StudentResources* studentResourcesWindow;
     TeacherResources* teacherResourcesWindow;
+
+    //StudentTests* studentResourcesWindow;
+    TestsMenu* testsMenuWindow;
 };

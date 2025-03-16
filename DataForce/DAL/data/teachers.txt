@@ -1,5 +1,2 @@
 TeacherId,FirstName,LastName,Subject,UserId
-1,Alexander,Baev,Mathematics,1
-2,Emil,Bogdanov,English,
-3,Valeria,Yanakieva,English,
-4,Michael,Mitev,English,
+1,Alexander,Ivanov,Mathematics,1

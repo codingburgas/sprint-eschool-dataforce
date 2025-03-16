@@ -40,7 +40,7 @@ void Menu::onDiaryButtonClicked()
     }
 }
 
-void Menu::onTestsButtonClicked()
+void Menu::onResourcesButtonClicked()
 {
     if (CurrentUser::role == "student")
     {
@@ -54,7 +54,7 @@ void Menu::onTestsButtonClicked()
     }
     else if (CurrentUser::role == "teacher")
     {
-        if (!teacherDiaryWindow)
+        if (!teacherResourcesWindow)
         {
             teacherResourcesWindow = new TeacherResources(this);
         }
@@ -64,12 +64,21 @@ void Menu::onTestsButtonClicked()
     }
 }
 
-void Menu::onResourcesButtonClicked()
+void Menu::onTestsButtonClicked()
 {
+    testsMenuWindow = new TestsMenu(this);
+
+    testsMenuWindow->show();
+    this->hide();
 }
 
 void Menu::onBackButtonClicked()
 {
+    CurrentUser::userId = 0;
+    CurrentUser::username = "";
+    CurrentUser::role = "";
+    CurrentUser::className = "";
+ 
     this->hide();
     loginWindow->show();
 }

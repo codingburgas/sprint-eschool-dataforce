@@ -38,6 +38,12 @@
     <ClInclude Include="gradeService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="testService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testStudentService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="studentService.cpp">
@@ -53,6 +59,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="gradeService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="questionService.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="questionService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testStudentService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

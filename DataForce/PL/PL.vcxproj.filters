@@ -61,6 +61,15 @@
     <ClCompile Include="teacherResources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="testsMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="teacherTestWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studentTestWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="login.h">
@@ -78,6 +87,15 @@
     <QtMoc Include="teacherResources.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="testsMenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="teacherTestWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="studentTestWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="login.ui">
@@ -93,6 +111,15 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="teacherResources.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="testsMenu.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="teacherTestWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="studentTestWindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

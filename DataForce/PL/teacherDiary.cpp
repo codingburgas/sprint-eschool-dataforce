@@ -4,7 +4,7 @@
 TeacherDiary::TeacherDiary(QWidget *parent) : QMainWindow(parent), ui(new Ui::TeacherDiaryClass())
 {
 	ui->setupUi(this);
-	menuWindow = parent;  // Store the menu reference
+	menuWindow = parent;
     loadGrades();
 
 	connect(ui->backButton, &QPushButton::clicked, this, &TeacherDiary::onBackButtonClicked);

@@ -1,3 +1,3 @@
-TestId,TestName,TeacherId,TestDate
-1,Math Midterm,1,2025-04-10
-2,Science Midterm,2,2025-04-12
+TestId,Title,QuestionCount,TeacherId
+1,Math,2,1
+2,Science,2,1
