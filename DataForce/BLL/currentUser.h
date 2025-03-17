@@ -8,5 +8,4 @@ struct CurrentUser
     static int teacherId;
     static QString username;
     static QString role;
-    static QString className;
 };

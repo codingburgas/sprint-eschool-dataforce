@@ -20,7 +20,7 @@ TeacherDiary::~TeacherDiary()
 
 void TeacherDiary::loadGrades()
 {
-    QVector<Student> students = StudentService::getStudentsByClass(CurrentUser::className);
+    QVector<Student> students = StudentService::getAllStudents();
     ui->gradeTable->setRowCount(0);
 
     for (const Student& s : students)
@@ -31,24 +31,20 @@ void TeacherDiary::loadGrades()
         QVector<Grade> grades = GradeService::getGradesByStudentId(s.StudentId);
         Teacher t = TeacherService::getTeacherById(CurrentUser::teacherId);
 
-        // Add Student Id as the first column
         ui->gradeTable->setItem(row, 0, new QTableWidgetItem(QString::number(s.StudentId)));
-
-        // Student Name
         ui->gradeTable->setItem(row, 1, new QTableWidgetItem(s.FirstName + " " + s.LastName));
-
-        // Teacher Name
         ui->gradeTable->setItem(row, 2, new QTableWidgetItem(t.FirstName + " " + t.LastName));
 
-        // Display Grade or Empty Cell
         if (!grades.isEmpty())
         {
             QString gradeText;
+
             for (const Grade& g : grades)
             {
                 gradeText += g.GradeValue + ", ";
             }
             gradeText.chop(2); // Remove last comma
+
             ui->gradeTable->setItem(row, 3, new QTableWidgetItem(gradeText));
         }
         else

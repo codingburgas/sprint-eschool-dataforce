@@ -4,12 +4,7 @@ Login::Login(QWidget *parent) : QMainWindow(parent), ui(new Ui::LoginClass)
 {
 	ui->setupUi(this);
 
-    CurrentUser::className = "";
-    CurrentUser::role = "";
-    CurrentUser::username = "";
-    CurrentUser::studentId = 0;
-    CurrentUser::teacherId = 0;
-    CurrentUser::userId = 0;
+    UserService::logout();
 
 	connect(ui->loginButton, &QPushButton::clicked, this, &Login::checkLogin);
 }
@@ -25,6 +20,15 @@ void Login::checkLogin()
     if (UserService::validateUser(username, password))
     {
         QMessageBox::information(this, "Login Successful", "Welcome, " + CurrentUser::username + "!");
+
+        if (CurrentUser::role == "admin")
+        {
+            adminWindow = new AdminMenu(this);
+
+            adminWindow->show();
+            this->hide();
+            return;
+        }
 
         if (!menuWindow)
         {

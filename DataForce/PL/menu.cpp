@@ -74,10 +74,7 @@ void Menu::onTestsButtonClicked()
 
 void Menu::onBackButtonClicked()
 {
-    CurrentUser::userId = 0;
-    CurrentUser::username = "";
-    CurrentUser::role = "";
-    CurrentUser::className = "";
+    UserService::logout();
  
     this->hide();
     loginWindow->show();

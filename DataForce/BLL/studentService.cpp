@@ -5,56 +5,12 @@ QVector<Student> StudentService::getAllStudents()
     return Student::readFromFile();
 }
 
-QVector<Student> StudentService::getStudentsByClass(QString className)
-{
-    QVector<Student> students = Student::readFromFile();
-    QVector<Student> filteredStudents;
-
-    for (Student& s : students)
-    {
-        QString studentClassName = UserService::getUserById(s.UserId).Class;
-
-        if (studentClassName == className)
-        {
-            filteredStudents.push_back(s);
-        }
-    }
-
-    return filteredStudents;
-}
-
 void StudentService::addStudent(const Student& student) 
 {
     QVector<Student> students = Student::readFromFile();
     students.push_back(student);
     Student::writeToFile(students);
 }
-
-void StudentService::updateStudent(int StudentId, const Student& student)
-{
-    QVector<Student> students = Student::readFromFile();
-
-    for (Student& s : students)
-    {
-        if (s.StudentId == StudentId) 
-        {
-            s = student;
-            break;
-        }
-    }
-    Student::writeToFile(students);
-}
-
-void StudentService::removeStudent(int StudentId) {
-    QVector<Student> students = Student::readFromFile();
-
-    students.erase(std::remove_if(students.begin(), students.end(),
-        [StudentId](const Student& s) { return s.StudentId == StudentId; }),
-        students.end());
-
-    Student::writeToFile(students);
-}
-
 
 Student StudentService::getStudentByUserId(int userId)
 {
@@ -82,15 +38,21 @@ Student StudentService::getStudentById(int studentId)
     }
 }
 
-int StudentService::getStudentIdByFirstName(QString firstName)
+int StudentService::getNextStudentId()
 {
     QVector<Student> students = Student::readFromFile();
 
-    for (Student& student : students)
+    if (students.isEmpty()) return 1;
+
+    int maxId = 0;
+
+    for (const Student& s : students)
     {
-        if (student.FirstName == firstName)
+        if (s.StudentId > maxId)
         {
-            return student.StudentId;
+            maxId = s.StudentId;
         }
     }
+
+    return maxId + 1;
 }

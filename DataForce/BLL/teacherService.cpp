@@ -11,24 +11,25 @@ void TeacherService::addTeacher(const Teacher& teacher) {
     Teacher::writeToFile(teachers);
 }
 
-void TeacherService::updateTeacher(int teacherId, const Teacher& teacher) {
+int TeacherService::getNextTeacherId()
+{
     QVector<Teacher> teachers = Teacher::readFromFile();
-    for (auto& t : teachers) {
-        if (t.TeacherId== teacherId) {
-            t = teacher;
-            break;
+
+    if (teachers.isEmpty()) return 1;
+
+    int maxId = 0;
+
+    for (const Teacher& t : teachers)
+    {
+        if (t.TeacherId > maxId)
+        {
+            maxId = t.TeacherId;
         }
     }
-    Teacher::writeToFile(teachers);
+
+    return maxId + 1;
 }
 
-void TeacherService::removeTeacher(int teacherId) {
-    QVector<Teacher> teachers = Teacher::readFromFile();
-    teachers.erase(std::remove_if(teachers.begin(), teachers.end(),
-        [teacherId](const Teacher& t) { return t.TeacherId == teacherId; }),
-        teachers.end());
-    Teacher::writeToFile(teachers);
-}
 
 Teacher TeacherService::getTeacherByUserId(int userId)
 {

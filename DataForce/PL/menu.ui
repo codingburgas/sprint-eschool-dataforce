@@ -148,7 +148,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 14pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>online school</string>
