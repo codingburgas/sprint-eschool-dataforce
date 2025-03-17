@@ -12,7 +12,7 @@ TeacherTestWindow::TeacherTestWindow(QWidget *parent) : QDialog(parent), ui(new 
     connect(ui->addButton, &QPushButton::clicked, this, &TeacherTestWindow::addQuestion);
     connect(ui->deleteButton, &QPushButton::clicked, this, &TeacherTestWindow::deleteQuestion);
     connect(ui->viewGradesButton, &QPushButton::clicked, this, &TeacherTestWindow::viewGrades);
-
+    
 }
 
 TeacherTestWindow::~TeacherTestWindow()
@@ -62,10 +62,10 @@ void TeacherTestWindow::loadQuestion(int questionId)
         {
             ui->title->setText(currentTest.Title);
             ui->question->setText(q.Text);
-            ui->optionA->setText(q.OptionA);
-            ui->optionB->setText(q.OptionB);
-            ui->optionC->setText(q.OptionC);
-            ui->optionD->setText(q.OptionD);
+            ui->optionA->setText("  A: " + q.OptionA);
+            ui->optionB->setText("  B: " + q.OptionB);
+            ui->optionC->setText("  C: " + q.OptionC);
+            ui->optionD->setText("  D: " + q.OptionD);
             ui->correctAnswer->setCurrentText(q.CorrectAnswer);
             return;
         }
@@ -98,10 +98,10 @@ void TeacherTestWindow::saveQuestion()
     Question q = questions[currentQuestion];
 
     q.Text = ui->question->text();
-    q.OptionA = ui->optionA->text();
-    q.OptionB = ui->optionB->text();
-    q.OptionC = ui->optionC->text();
-    q.OptionD = ui->optionD->text();
+    q.OptionA = ui->optionA->text().mid(5); // remove A:
+    q.OptionB = ui->optionB->text().mid(5);
+    q.OptionC = ui->optionC->text().mid(5);
+    q.OptionD = ui->optionD->text().mid(5);
     q.CorrectAnswer = ui->correctAnswer->currentText();
 
     QuestionService::updateQuestion(q);

@@ -45,8 +45,10 @@ void Question::writeToFile(const QVector<Question>& questions)
 {
     QFile file("../DAL/data/questions.txt");
 
-    if (file.open(QIODevice::WriteOnly)) {
+    if (file.open(QIODevice::WriteOnly)) 
+    {
         QTextStream out(&file);
+
         out << "QuestionId,TestId,Text,OptionA,OptionB,OptionC,OptionD,CorrectAnswer\n";
 
         for (const Question& question : questions)

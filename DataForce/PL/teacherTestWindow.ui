@@ -6,88 +6,45 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>524</width>
+    <height>333</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>TeacherTestWindow</string>
   </property>
-  <widget class="QLineEdit" name="optionA">
+  <widget class="QLabel" name="background">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>190</y>
-     <width>141</width>
-     <height>51</height>
+     <x>-70</x>
+     <y>-50</y>
+     <width>701</width>
+     <height>431</height>
     </rect>
    </property>
    <property name="text">
-    <string>Option A</string>
+    <string/>
    </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
+   <property name="pixmap">
+    <pixmap>images/menu_background.jpg</pixmap>
    </property>
   </widget>
-  <widget class="QLineEdit" name="optionC">
+  <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>280</y>
-     <width>141</width>
-     <height>51</height>
+     <x>0</x>
+     <y>10</y>
+     <width>521</width>
+     <height>41</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Option C</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="optionB">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>190</y>
-     <width>141</width>
-     <height>51</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+font: 26pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
-    <string>Option B</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="optionD">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>280</y>
-     <width>141</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Option D</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="question">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>80</y>
-     <width>281</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Question here</string>
+    <string>Title</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -96,11 +53,24 @@
   <widget class="QPushButton" name="nextButton">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>350</y>
-     <width>80</width>
-     <height>24</height>
+     <x>420</x>
+     <y>290</y>
+     <width>91</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
     <string>Next</string>
@@ -109,50 +79,34 @@
   <widget class="QPushButton" name="previousButton">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>350</y>
-     <width>80</width>
-     <height>24</height>
+     <x>10</x>
+     <y>290</y>
+     <width>91</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
     <string>Previous</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="saveButton">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>120</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Save</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="addButton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add</string>
-   </property>
-  </widget>
   <widget class="QComboBox" name="correctAnswer">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>350</y>
-     <width>72</width>
-     <height>24</height>
+     <x>220</x>
+     <y>290</y>
+     <width>91</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
    <item>
     <property name="text">
@@ -174,52 +128,210 @@
      <string>D</string>
     </property>
    </item>
+   <item>
+    <property name="text">
+     <string>F</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="addButton">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>70</y>
+     <width>95</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="deleteButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>120</y>
-     <width>80</width>
-     <height>24</height>
+     <x>8</x>
+     <y>100</y>
+     <width>95</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
     <string>Delete</string>
    </property>
   </widget>
-  <widget class="QLabel" name="title">
+  <widget class="QPushButton" name="viewGradesButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>10</y>
-     <width>521</width>
+     <x>420</x>
+     <y>70</y>
+     <width>95</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>View Grades</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>100</y>
+     <width>95</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="question">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>70</y>
+     <width>301</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>21</pointsize>
+     <family>Rockwell</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
    <property name="text">
-    <string>Title</string>
+    <string>Question</string>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="viewGradesButton">
+  <widget class="QLineEdit" name="optionC">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>90</y>
-     <width>80</width>
-     <height>24</height>
+     <x>90</x>
+     <y>200</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);</string>
+   </property>
    <property name="text">
-    <string>View Grades</string>
+    <string>  C:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="optionD">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>200</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>  D: </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="optionB">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>150</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string>  B:</string>
+   </property>
+   <property name="maxLength">
+    <number>32767</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="optionA">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>150</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>  A:</string>
    </property>
   </widget>
  </widget>

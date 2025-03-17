@@ -26,9 +26,6 @@
     <property name="text">
      <string/>
     </property>
-    <property name="pixmap">
-     <pixmap>images/menu_background.jpg</pixmap>
-    </property>
    </widget>
    <widget class="QTableWidget" name="gradeTable">
     <property name="geometry">

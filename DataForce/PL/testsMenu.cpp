@@ -71,9 +71,7 @@ void TestsMenu::loadTests()
             }
         )").arg(gradientColor.split(", ")[0], gradientColor.split(", ")[1]));
 
-        connect(testButton, &QPushButton::clicked, this, [=]() {
-            openTest(tests[i].TestId);
-            });
+        connect(testButton, &QPushButton::clicked, this, [=]() { openTest(tests[i].TestId); });
 
         scrollLayout->addWidget(testButton, row, col);
         col++;
