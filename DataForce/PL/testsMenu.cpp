@@ -1,76 +1,112 @@
-#include "testsMenu.h"
+﻿#include "testsMenu.h"
 
-TestsMenu::TestsMenu(QWidget *parent) : QMainWindow(parent), ui(new Ui::TestsMenuClass())
+TestsMenu::TestsMenu(QWidget* parent) : QMainWindow(parent), ui(new Ui::TestsMenuClass())
 {
-	ui->setupUi(this);
+    ui->setupUi(this);
     menuWindow = parent;
+
+    scrollAreaWidget = new QWidget();
+    scrollLayout = new QGridLayout(scrollAreaWidget);
+
+    ui->scrollArea->setWidget(scrollAreaWidget);
+    ui->scrollArea->setWidgetResizable(true);
+
     loadTests();
 
-    connect(ui->tableWidget, &QTableWidget::itemDoubleClicked, this, &TestsMenu::openTest);
     connect(ui->backButton, &QPushButton::clicked, this, &TestsMenu::onBackButtonClicked);
     connect(ui->refreshButton, &QPushButton::clicked, this, &TestsMenu::loadTests);
-
 }
 
 TestsMenu::~TestsMenu()
 {
 }
 
-void TestsMenu::loadTests() 
+void TestsMenu::loadTests()
 {
-    ui->tableWidget->clearContents();
-    ui->tableWidget->setRowCount(0);
-    QVector<Test> tests = TestService::getAllTests();
-    ui->tableWidget->setRowCount(tests.size());
+    // Clear previous buttons
+    qDeleteAll(scrollLayout->children());
 
-    for (int i = 0; i < tests.size(); i++) 
+    QVector<Test> tests = TestService::getAllTests();
+    int columns = 4;
+    int row = 0, col = 0;
+
+    QStringList colors = {
+        "#ff9a9e, #fad0c4", "#a1c4fd, #c2e9fb", "#d4fc79, #96e6a1",
+        "#fbc2eb, #a6c1ee", "#ffecd2, #fcb69f", "#f6d365, #fda085",
+        "#84fab0, #8fd3f4", "#a18cd1, #fbc2eb"
+    };
+
+    for (int i = 0; i < tests.size(); i++)
     {
-        ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::number(tests[i].TestId)));
-        ui->tableWidget->setItem(i, 1, new QTableWidgetItem(tests[i].Title));
-        ui->tableWidget->setItem(i, 2, new QTableWidgetItem(QString::number(tests[i].TeacherId)));
+        QString testTitle = tests[i].Title;
 
         if (CurrentUser::role == "student")
         {
             QString grade = TestStudentService::getTestGradeById(tests[i].TestId, CurrentUser::studentId);
-            
-            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(grade));
+
+            if (grade != "Not Graded")
+            {
+                testTitle += " ✅";
+            }
         }
-        else
+
+        QPushButton* testButton = new QPushButton(testTitle);
+        testButton->setFixedSize(120, 70);
+        testButton->setProperty("testId", tests[i].TestId);
+
+        QString gradientColor = colors[i % colors.size()];
+
+        testButton->setStyleSheet(QString(R"(
+            QPushButton {
+                background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 %1, stop:1 %2);
+                border: 2px solid rgba(0,0,0,0.2);
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                padding: 5px;
+            }
+            QPushButton:hover {
+                background: rgba(255,255,255,0.2);
+            }
+        )").arg(gradientColor.split(", ")[0], gradientColor.split(", ")[1]));
+
+        connect(testButton, &QPushButton::clicked, this, [=]() {
+            openTest(tests[i].TestId);
+            });
+
+        scrollLayout->addWidget(testButton, row, col);
+        col++;
+        
+        if (col >= columns) 
         {
-            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(""));
+            col = 0;
+            row++;
         }
     }
 }
 
-void TestsMenu::openTest()
+void TestsMenu::openTest(int testId)
 {
-    QTableWidgetItem* selectedItem = ui->tableWidget->currentItem();
-
-    if (selectedItem)
+    if (CurrentUser::role == "teacher")
     {
-        int row = selectedItem->row();
-        int testId = ui->tableWidget->item(row, 0)->text().toInt();
+        TeacherTestWindow* teacherTestWindow = new TeacherTestWindow(this);
+        teacherTestWindow->setTest(testId);
+        teacherTestWindow->show();
+    }
+    else if (CurrentUser::role == "student")
+    {
+        QString grade = TestStudentService::getTestGradeById(testId, CurrentUser::studentId);
 
-        if (CurrentUser::role == "teacher")
+        if (grade == "Not Graded")
         {
-            TeacherTestWindow* teacherTestWindow = new TeacherTestWindow(this);
-            teacherTestWindow->setTest(testId);
-            teacherTestWindow->show();
+            StudentTestWindow* studentTestWindow = new StudentTestWindow(this);
+            studentTestWindow->setTest(testId);
+            studentTestWindow->show();
         }
-        else if (CurrentUser::role == "student")
+        else
         {
-            QString grade = TestStudentService::getTestGradeById(testId, CurrentUser::studentId);
-
-            if (grade == "Not Graded")  // Student doesn't have a grade, so they can open the test
-            {
-                StudentTestWindow* studentTestWindow = new StudentTestWindow(this);
-                studentTestWindow->setTest(testId);
-                studentTestWindow->show();
-            }
-            else 
-            {
-                QMessageBox::information(this, "Test already completed", "You have already completed this test and cannot take it again.");
-            }
+            QMessageBox::information(this, "Test already completed", "You have already completed this test and cannot take it again.");
         }
     }
 }

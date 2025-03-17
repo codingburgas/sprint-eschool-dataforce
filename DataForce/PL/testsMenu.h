@@ -7,6 +7,7 @@
 #include "../BLL/testStudentService.h"
 #include "teacherTestWindow.h"
 #include "studentTestWindow.h"
+#include <QGridLayout>
 
 class TestsMenu : public QMainWindow
 {
@@ -18,13 +19,15 @@ public:
 
 private slots:
 	void loadTests();
-	void openTest();
+	void openTest(int testId);
 	void onBackButtonClicked();
 		
 
 private:
 	Ui::TestsMenuClass* ui;
 	QWidget* menuWindow;
+	QWidget* scrollAreaWidget;
+	QGridLayout* scrollLayout;
 
 	TeacherTestWindow* teacherTestWindow;
 	StudentTestWindow* studentTestWindow;

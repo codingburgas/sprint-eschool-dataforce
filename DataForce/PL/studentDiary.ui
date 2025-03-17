@@ -74,7 +74,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
      <bool>false</bool>
     </property>
     <property name="rowCount">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="columnCount">
      <number>4</number>
@@ -97,17 +97,9 @@ font: 12pt &quot;Segoe UI&quot;;</string>
     <attribute name="verticalHeaderDefaultSectionSize">
      <number>30</number>
     </attribute>
-    <row>
-     <property name="text">
-      <string>New Row</string>
-     </property>
-     <property name="textAlignment">
-      <set>AlignCenter</set>
-     </property>
-    </row>
     <column>
      <property name="text">
-      <string>Id</string>
+      <string>Date</string>
      </property>
      <property name="font">
       <font>
