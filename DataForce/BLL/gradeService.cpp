@@ -1,19 +1,5 @@
 #include "gradeService.h"
-
-QVector<Grade> GradeService::getGradesByClass(QString className)
-{
-    QVector<Grade> classGrades = { };
-    QVector<Grade> allGrades = Grade::readFromFile();
-
-    for (const Grade& g : allGrades)
-    {
-        if (g.Class == className)
-        {
-            classGrades.push_back(g);
-        }
-    }
-    return classGrades;
-}
+#include <QDebug>
 
 QVector<Grade> GradeService::getGradesByStudentId(int studentId)
 {
@@ -46,11 +32,11 @@ void GradeService::updateGrade(int gradeId, QString newGrade)
     Grade::writeToFile(grades);
 }
 
-void GradeService::addGrade(int studentId, int teacherId, QString className, QString gradeValue)
+void GradeService::addGrade(int studentId, int teacherId, QString gradeValue, QDateTime gradeDate)
 {
     QVector<Grade> grades = Grade::readFromFile();
     int newGradeId = grades.isEmpty() ? 1 : grades.last().GradeId + 1;
 
-    grades.append({ newGradeId, studentId, teacherId, className, gradeValue });
+    grades.append({ newGradeId, studentId, teacherId, gradeValue, gradeDate });
     Grade::writeToFile(grades);
 }

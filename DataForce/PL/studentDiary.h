@@ -12,7 +12,8 @@ public:
 	~StudentDiary();
 
 private slots:
-	void onBackButtonClicked();  // Function for the Back button
+	void logout();
+	void loadGrades();
 
 private:
 	Ui::StudentDiaryClass *ui;

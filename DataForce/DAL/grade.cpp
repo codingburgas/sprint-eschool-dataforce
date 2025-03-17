@@ -25,8 +25,8 @@ QVector<Grade> Grade::readFromFile()
                 grade.GradeId = fields[0].toInt();
                 grade.StudentId = fields[1].toInt();
                 grade.TeacherId = fields[2].toInt();
-                grade.Class = fields[3];
-                grade.GradeValue = fields[4];
+                grade.GradeValue = fields[3];
+                grade.GradeDate = QDateTime::fromString(fields[4], "yyyy-MM-dd HH:mm:ss");
 
                 grades.push_back(grade);
             }
@@ -44,15 +44,15 @@ void Grade::writeToFile(const QVector<Grade>& grades) {
 
     if (file.open(QIODevice::WriteOnly)) {
         QTextStream out(&file);
-        out << "GradeId,StudentId,TeacherId,GradeValue\n";
+        out << "GradeId,StudentId,TeacherId,GradeValue,GradeDate\n";
 
         for (const Grade& grade : grades)
         {
             out << grade.GradeId << ","
                 << grade.StudentId << ","
                 << grade.TeacherId << ","
-                << grade.Class << ","
-                << grade.GradeValue << "\n";
+                << grade.GradeValue << ","
+                << grade.GradeDate.toString("yyyy-MM-dd HH:mm:ss") << "\n";
         }
         file.close();
     }

@@ -56,27 +56,6 @@ void TeacherDiary::loadGrades()
     }
 }
 
-
-//
-//void TeacherDiary::loadGrades()
-//{
-//    QVector<Grade> grades = GradeService::getGradesByClass(CurrentUser::className);
-//
-//    ui->gradeTable->setRowCount(0);
-//
-//    for (const Grade& g : grades)
-//    {
-//        int row = ui->gradeTable->rowCount();
-//
-//        qDebug() << StudentService::getStudentById(g.StudentId).FirstName;
-//
-//        ui->gradeTable->insertRow(row);
-//        ui->gradeTable->setItem(row, 0, new QTableWidgetItem(StudentService::getStudentById(g.StudentId).FirstName + " " + StudentService::getStudentById(g.StudentId).LastName));
-//        ui->gradeTable->setItem(row, 1, new QTableWidgetItem(TeacherService::getTeacherById(g.TeacherId).FirstName + " " + TeacherService::getTeacherById(g.TeacherId).LastName));
-//        ui->gradeTable->setItem(row, 2, new QTableWidgetItem(g.GradeValue));
-//    }
-//}
-
 void TeacherDiary::updateGrade()
 {
     int selectedRow = ui->gradeTable->currentRow();
@@ -115,7 +94,7 @@ void TeacherDiary::addGrade()
 
     qDebug() << "dddd";
 
-    GradeService::addGrade(studentId, CurrentUser::teacherId, CurrentUser::className, gradeValue);
+    GradeService::addGrade(studentId, CurrentUser::teacherId, gradeValue, QDateTime::currentDateTime());
     loadGrades();
 }
 

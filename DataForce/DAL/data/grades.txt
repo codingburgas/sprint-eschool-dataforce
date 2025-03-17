@@ -1,3 +1,2 @@
-GradeId,StudentId,TeacherId,GradeValue
-1,1,1,Math 101,A
-2,1,1,Math 101,B
+GradeId,StudentId,TeacherId,GradeValue,GradeDate
+1,1,1,B,2025-03-17 08:46:38
