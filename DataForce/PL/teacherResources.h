@@ -23,6 +23,7 @@ private slots:
 	void openResource();
 	void addResource();
 	void deleteResource();
+	void logout();
 
 
 private:

@@ -1,28 +1,14 @@
 #include "teacherResources.h"
+#include <login.h>
 
 TeacherResources::TeacherResources(QWidget *parent) : QMainWindow(parent), ui(new Ui::TeacherResourcesClass())
 {
 	ui->setupUi(this);
 
-    auto* centralWidget = new QWidget(this);
-    auto* layout = new QVBoxLayout(centralWidget);
-
-    // Create list widget for PDFs
-    pdfListWidget = new QListWidget(this);
-    openResourceButton = new QPushButton("Open Resource", this);
-    addResourceButton = new QPushButton("Add Resource", this);
-    deleteResourceButton = new QPushButton("Delete Resource", this);
-
-    layout->addWidget(pdfListWidget);
-    layout->addWidget(openResourceButton);
-    layout->addWidget(addResourceButton);
-    layout->addWidget(deleteResourceButton);
-
-    setCentralWidget(centralWidget);
-
-    connect(openResourceButton, &QPushButton::clicked, this, &TeacherResources::openResource);
-    connect(addResourceButton, &QPushButton::clicked, this, &TeacherResources::addResource);
-    connect(deleteResourceButton, &QPushButton::clicked, this, &TeacherResources::deleteResource);
+    connect(ui->openResourceButton, &QPushButton::clicked, this, &TeacherResources::openResource);
+    connect(ui->addResourceButton, &QPushButton::clicked, this, &TeacherResources::addResource);
+    connect(ui->deleteResourceButton, &QPushButton::clicked, this, &TeacherResources::deleteResource);
+    connect(ui->logoutButton, &QPushButton::clicked, this, &TeacherResources::logout);
 
     loadPdfList();
 }
@@ -35,7 +21,7 @@ TeacherResources::~TeacherResources()
 
 void TeacherResources::loadPdfList()
 {
-    pdfListWidget->clear();
+    ui->pdfListWidget->clear();
 
     QString directoryPath = QDir::currentPath() + "/pdfs/9th-grade";
 
@@ -47,13 +33,13 @@ void TeacherResources::loadPdfList()
 
     for (const QFileInfo& fileInfo : files)
     {
-        pdfListWidget->addItem(fileInfo.filePath());
+        ui->pdfListWidget->addItem(fileInfo.filePath());
     }
 }
 
 void TeacherResources::openResource()
 {
-    QListWidgetItem* selectedItem = pdfListWidget->currentItem();
+    QListWidgetItem* selectedItem = ui->pdfListWidget->currentItem();
 
     if (selectedItem)
     {
@@ -85,7 +71,7 @@ void TeacherResources::addResource()
 
 void TeacherResources::deleteResource()
 {
-    QListWidgetItem* selectedItem = pdfListWidget->currentItem();
+    QListWidgetItem* selectedItem = ui->pdfListWidget->currentItem();
 
     if (selectedItem)
     {
@@ -105,4 +91,12 @@ void TeacherResources::deleteResource()
     {
         QMessageBox::information(this, "No selection", "Please select a PDF to delete.");
     }
+}
+
+void TeacherResources::logout()
+{
+    Login* loginWindow = new Login();
+    loginWindow->show();
+
+    this->close();
 }

@@ -7,14 +7,14 @@
 #include "teacherDiary.h"
 #include "studentResources.h"
 #include "teacherResources.h"
-#include <testsMenu.h>
+#include "testsMenu.h"
 
 class Menu : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Menu(QWidget *parent = nullptr);
+    Menu(QWidget *parent = nullptr);
     ~Menu();
 
 
