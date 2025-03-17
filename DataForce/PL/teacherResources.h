@@ -29,10 +29,5 @@ private slots:
 private:
 	Ui::TeacherResourcesClass *ui;
 
-	QPushButton* openResourceButton;
-	QPushButton* addResourceButton;
-	QPushButton* deleteResourceButton;
-	QListWidget* pdfListWidget;
-
 	void loadPdfList();
 };
