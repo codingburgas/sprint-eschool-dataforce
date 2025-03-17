@@ -16,10 +16,10 @@ public:
 	~TeacherDiary();
 
 private slots:
-	void onBackButtonClicked();  // Function for the Back button
 	void loadGrades();
-	void updateGrade();
 	void addGrade();
+	void deleteGrade();
+	void logout();
 
 private:
 	Ui::TeacherDiaryClass *ui;

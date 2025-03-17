@@ -6,6 +6,6 @@ class GradeService
 {
 public:
     static QVector<Grade> getGradesByStudentId(int studentId);
-    static void updateGrade(int gradeId, QString newGrade);
+    static void deleteGrade(int gradeId);
     static void addGrade(int studentId, int teacherId, QString gradeValue, QDateTime gradeDate);
 };

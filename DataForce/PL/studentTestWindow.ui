@@ -6,26 +6,50 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>524</width>
+    <height>333</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>StudentTestWindow</string>
   </property>
+  <widget class="QLabel" name="background">
+   <property name="geometry">
+    <rect>
+     <x>-70</x>
+     <y>-50</y>
+     <width>701</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../../../../../../sprint-eschool-dataforce - Repo/sprint-eschool-dataforce/DataForce/PL/images/menu_background.jpg</pixmap>
+   </property>
+  </widget>
   <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>0</x>
      <y>10</y>
      <width>521</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>21</pointsize>
+     <family>Segoe UI</family>
+     <pointsize>26</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+color: rgb(255, 255, 255);
+font: 26pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
     <string>Title</string>
@@ -34,25 +58,61 @@
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QPushButton" name="nextButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>290</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);
+</string>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="previousButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);
+</string>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </widget>
   <widget class="QLabel" name="question">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>80</y>
-     <width>541</width>
-     <height>81</height>
+     <x>110</x>
+     <y>70</y>
+     <width>301</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>19</pointsize>
+     <family>Rockwell</family>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(100, 152, 152);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Shape::StyledPanel</enum>
+    <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>Question</string>
@@ -61,82 +121,108 @@
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="optionA">
+  <widget class="QPushButton" name="optionD">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>190</y>
+     <x>280</x>
+     <y>200</y>
      <width>161</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Option A</string>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
    </property>
-  </widget>
-  <widget class="QPushButton" name="optionC">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>270</y>
-     <width>161</width>
-     <height>51</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);
+</string>
    </property>
    <property name="text">
-    <string>Option C</string>
+    <string>D: </string>
    </property>
   </widget>
   <widget class="QPushButton" name="optionB">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>190</y>
+     <x>280</x>
+     <y>150</y>
      <width>161</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);
+</string>
+   </property>
    <property name="text">
-    <string>Option B</string>
+    <string>B:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="optionD">
+  <widget class="QPushButton" name="optionC">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>270</y>
+     <x>90</x>
+     <y>200</y>
      <width>161</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);
+</string>
+   </property>
    <property name="text">
-    <string>Option D</string>
+    <string>C:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="previousButton">
+  <widget class="QPushButton" name="optionA">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>360</y>
-     <width>80</width>
-     <height>24</height>
+     <x>90</x>
+     <y>150</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Previous</string>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
    </property>
-  </widget>
-  <widget class="QPushButton" name="nextButton">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>360</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.525, y2:0, stop:0 rgba(200, 226, 251, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 0);
+</string>
    </property>
    <property name="text">
-    <string>Next</string>
+    <string>A: </string>
    </property>
   </widget>
  </widget>

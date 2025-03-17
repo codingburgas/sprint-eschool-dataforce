@@ -6,46 +6,41 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>741</width>
+    <height>522</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>TeacherDiary</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="backButton">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>0</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::FocusPolicy::StrongFocus</enum>
-    </property>
-    <property name="text">
-     <string>⬅️</string>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="gradeTable">
     <property name="geometry">
      <rect>
-      <x>75</x>
-      <y>11</y>
-      <width>471</width>
-      <height>311</height>
+      <x>10</x>
+      <y>60</y>
+      <width>721</width>
+      <height>391</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(202, 243, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="editTriggers">
      <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
@@ -65,8 +60,20 @@
     <attribute name="horizontalHeaderCascadingSectionResizes">
      <bool>false</bool>
     </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>36</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>180</number>
+    </attribute>
     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
      <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>30</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>30</number>
     </attribute>
     <column>
      <property name="text">
@@ -82,15 +89,25 @@
      <property name="text">
       <string>Student</string>
      </property>
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+      </font>
+     </property>
     </column>
     <column>
      <property name="text">
       <string>Teacher</string>
      </property>
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+      </font>
+     </property>
     </column>
     <column>
      <property name="text">
-      <string>Grade</string>
+      <string>Grades</string>
      </property>
      <property name="font">
       <font>
@@ -99,14 +116,138 @@
      </property>
     </column>
    </widget>
+   <widget class="QFrame" name="navbar">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>0</y>
+      <width>771</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(166, 177, 210);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>5</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Log out </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="menuButton">
+     <property name="geometry">
+      <rect>
+       <x>466</x>
+       <y>10</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Menu</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="testsButton">
+     <property name="geometry">
+      <rect>
+       <x>527</x>
+       <y>10</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Tests</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="resourcesButton">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+font: 12pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Resources</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="addGradeButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>390</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Add Grade</string>
+    </property>
+   </widget>
    <widget class="QComboBox" name="gradeComboBox">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>220</y>
-      <width>72</width>
-      <height>24</height>
+      <x>600</x>
+      <y>340</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);
+</string>
     </property>
     <item>
      <property name="text">
@@ -139,17 +280,29 @@
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="addGradeButton">
+   <widget class="QPushButton" name="deleteGradeButton">
     <property name="geometry">
      <rect>
-      <x>435</x>
-      <y>246</y>
-      <width>80</width>
-      <height>24</height>
+      <x>30</x>
+      <y>390</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(169, 213, 255);
+color: rgb(0, 0, 0);</string>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Delete Grade</string>
     </property>
    </widget>
   </widget>
@@ -158,7 +311,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>741</width>
      <height>21</height>
     </rect>
    </property>

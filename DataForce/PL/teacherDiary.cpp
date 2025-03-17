@@ -1,5 +1,6 @@
 #include "teacherDiary.h"
 #include <QMessageBox>
+#include <login.h>
 
 TeacherDiary::TeacherDiary(QWidget *parent) : QMainWindow(parent), ui(new Ui::TeacherDiaryClass())
 {
@@ -7,8 +8,9 @@ TeacherDiary::TeacherDiary(QWidget *parent) : QMainWindow(parent), ui(new Ui::Te
 	menuWindow = parent;
     loadGrades();
 
-	connect(ui->backButton, &QPushButton::clicked, this, &TeacherDiary::onBackButtonClicked);
     connect(ui->addGradeButton, &QPushButton::clicked, this, &TeacherDiary::addGrade);
+    connect(ui->deleteGradeButton, &QPushButton::clicked, this, &TeacherDiary::deleteGrade);
+    connect(ui->logoutButton, &QPushButton::clicked, this, &TeacherDiary::logout);
 }
 
 TeacherDiary::~TeacherDiary()
@@ -54,29 +56,50 @@ void TeacherDiary::loadGrades()
             ui->gradeTable->setItem(row, 3, new QTableWidgetItem("-"));
         }
     }
+
 }
 
-void TeacherDiary::updateGrade()
+void TeacherDiary::deleteGrade()
 {
-    int selectedRow = ui->gradeTable->currentRow();
-
-    if (selectedRow == -1)
+    if (ui->gradeTable->currentRow() == -1)
     {
-        QMessageBox::warning(this, "Selection Error", "Please select a grade to update.");
+        QMessageBox::warning(this, "Selection Error", "Please select a student to delete a grade.");
         return;
     }
 
-    int gradeId = ui->gradeTable->item(selectedRow, 0)->text().toInt();
-    QString newGrade = ui->gradeComboBox->currentText();
+    int selectedRow = ui->gradeTable->currentRow();
+    int studentId = ui->gradeTable->item(selectedRow, 0)->text().toInt();
 
-    GradeService::updateGrade(gradeId, newGrade);
+    QVector<Grade> grades = GradeService::getGradesByStudentId(studentId);
+
+    if (grades.isEmpty())
+    {
+        QMessageBox::warning(this, "No Grades", "This student has no grades to delete.");
+        return;
+    }
+
+    QMessageBox::StandardButton reply;
+ 
+    reply = QMessageBox::question(this, "Delete Grade",
+        "Are you sure you want to delete the last entered grade?",
+        QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::No)
+    {
+        return;
+    }
+
+    GradeService::deleteGrade(grades.last().GradeId);
+
     loadGrades();
 }
+
 
 void TeacherDiary::addGrade()
 {
     if (ui->gradeTable->currentRow() == -1)
     {
+        QMessageBox::warning(this, "Selection Error", "Please select a student to add a grade.");
         return;
     }
 
@@ -92,15 +115,15 @@ void TeacherDiary::addGrade()
         return;
     }
 
-    qDebug() << "dddd";
-
     GradeService::addGrade(studentId, CurrentUser::teacherId, gradeValue, QDateTime::currentDateTime());
     loadGrades();
 }
 
 
-void TeacherDiary::onBackButtonClicked()
+void TeacherDiary::logout()
 {
-	this->hide();
-	menuWindow->show();
+    Login* loginWindow = new Login();
+    loginWindow->show();
+
+    this->close();
 }

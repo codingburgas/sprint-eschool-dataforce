@@ -17,19 +17,21 @@ QVector<Grade> GradeService::getGradesByStudentId(int studentId)
     return studentGrades;
 }
 
-void GradeService::updateGrade(int gradeId, QString newGrade)
+void GradeService::deleteGrade(int gradeId)
 {
+    QVector<Grade> newGrades = {};
     QVector<Grade> grades = Grade::readFromFile();
+
 
     for (Grade& g : grades)
     {
-        if (g.GradeId == gradeId)
+        if (g.GradeId != gradeId)
         {
-            g.GradeValue = newGrade;
-            break;
+            newGrades.append(g);
         }
     }
-    Grade::writeToFile(grades);
+
+    Grade::writeToFile(newGrades);
 }
 
 void GradeService::addGrade(int studentId, int teacherId, QString gradeValue, QDateTime gradeDate)
