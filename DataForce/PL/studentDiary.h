@@ -12,8 +12,8 @@ public:
 	~StudentDiary();
 
 private slots:
-	void logout();
 	void loadGrades();
+	void onBackButtonClicked();
 
 private:
 	Ui::StudentDiaryClass *ui;

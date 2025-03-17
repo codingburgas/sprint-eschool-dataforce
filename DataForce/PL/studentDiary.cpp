@@ -7,7 +7,7 @@ StudentDiary::StudentDiary(QWidget *parent) : QMainWindow(parent), ui(new Ui::St
 	menuWindow = parent;  // Store the menu reference
     loadGrades();
 
-    connect(ui->logoutButton, &QPushButton::clicked, this, &StudentDiary::logout);
+    connect(ui->backButton, &QPushButton::clicked, this, &StudentDiary::onBackButtonClicked);
 }
 
 StudentDiary::~StudentDiary()
@@ -37,10 +37,8 @@ void StudentDiary::loadGrades()
 }
 
 
-void StudentDiary::logout()
+void StudentDiary::onBackButtonClicked()
 {
-	Login* loginWindow = new Login();
-	loginWindow->show();
-
-	this->close();
+    this->hide();
+    menuWindow->show();
 }

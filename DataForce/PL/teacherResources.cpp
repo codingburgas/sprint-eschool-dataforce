@@ -3,12 +3,13 @@
 
 TeacherResources::TeacherResources(QWidget *parent) : QMainWindow(parent), ui(new Ui::TeacherResourcesClass())
 {
-	ui->setupUi(this);
+    ui->setupUi(this);
+    menuWindow = parent;
 
     connect(ui->openResourceButton, &QPushButton::clicked, this, &TeacherResources::openResource);
     connect(ui->addResourceButton, &QPushButton::clicked, this, &TeacherResources::addResource);
     connect(ui->deleteResourceButton, &QPushButton::clicked, this, &TeacherResources::deleteResource);
-    connect(ui->logoutButton, &QPushButton::clicked, this, &TeacherResources::logout);
+    connect(ui->backButton, &QPushButton::clicked, this, &TeacherResources::onBackButtonClicked);
 
     loadPdfList();
 }
@@ -93,10 +94,8 @@ void TeacherResources::deleteResource()
     }
 }
 
-void TeacherResources::logout()
+void TeacherResources::onBackButtonClicked()
 {
-    Login* loginWindow = new Login();
-    loginWindow->show();
-
-    this->close();
+    this->hide();
+    menuWindow->show();
 }

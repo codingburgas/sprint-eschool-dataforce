@@ -19,7 +19,7 @@ private slots:
 	void loadGrades();
 	void addGrade();
 	void deleteGrade();
-	void logout();
+	void onBackButtonClicked();
 
 private:
 	Ui::TeacherDiaryClass *ui;

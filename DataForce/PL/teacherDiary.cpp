@@ -10,7 +10,7 @@ TeacherDiary::TeacherDiary(QWidget *parent) : QMainWindow(parent), ui(new Ui::Te
 
     connect(ui->addGradeButton, &QPushButton::clicked, this, &TeacherDiary::addGrade);
     connect(ui->deleteGradeButton, &QPushButton::clicked, this, &TeacherDiary::deleteGrade);
-    connect(ui->logoutButton, &QPushButton::clicked, this, &TeacherDiary::logout);
+    connect(ui->backButton, &QPushButton::clicked, this, &TeacherDiary::onBackButtonClicked);
 }
 
 TeacherDiary::~TeacherDiary()
@@ -94,7 +94,6 @@ void TeacherDiary::deleteGrade()
     loadGrades();
 }
 
-
 void TeacherDiary::addGrade()
 {
     if (ui->gradeTable->currentRow() == -1)
@@ -119,11 +118,8 @@ void TeacherDiary::addGrade()
     loadGrades();
 }
 
-
-void TeacherDiary::logout()
+void TeacherDiary::onBackButtonClicked()
 {
-    Login* loginWindow = new Login();
-    loginWindow->show();
-
-    this->close();
+    this->hide();
+    menuWindow->show();
 }

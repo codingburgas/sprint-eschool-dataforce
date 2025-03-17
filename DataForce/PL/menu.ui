@@ -157,8 +157,8 @@
    <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
+      <x>4</x>
+      <y>17</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -170,6 +170,9 @@
     </property>
     <property name="focusPolicy">
      <enum>Qt::FocusPolicy::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
     </property>
     <property name="text">
      <string>⬅️</string>

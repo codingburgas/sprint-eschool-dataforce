@@ -14,94 +14,6 @@
    <string>StudentResources</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QFrame" name="navbar">
-    <property name="geometry">
-     <rect>
-      <x>-30</x>
-      <y>0</y>
-      <width>771</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(166, 177, 210);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
-    </property>
-    <widget class="QPushButton" name="logoutButton">
-     <property name="geometry">
-      <rect>
-       <x>670</x>
-       <y>5</y>
-       <width>81</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(169, 213, 255);
-color: rgb(0, 0, 0);
-font: 12pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Log out </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="menuButton">
-     <property name="geometry">
-      <rect>
-       <x>460</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 12pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Menu</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="testsButton">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>10</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 12pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Tests</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="resourcesButton">
-     <property name="geometry">
-      <rect>
-       <x>580</x>
-       <y>10</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-font: 12pt &quot;Segoe UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Resources</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QPushButton" name="openResourceButton">
     <property name="geometry">
      <rect>
@@ -128,6 +40,30 @@ font: 12pt &quot;Segoe UI&quot;;</string>
       <width>711</width>
       <height>361</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::FocusPolicy::StrongFocus</enum>
+    </property>
+    <property name="text">
+     <string>⬅️</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

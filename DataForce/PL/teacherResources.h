@@ -23,11 +23,11 @@ private slots:
 	void openResource();
 	void addResource();
 	void deleteResource();
-	void logout();
-
+	void onBackButtonClicked();
 
 private:
 	Ui::TeacherResourcesClass *ui;
+	QWidget* menuWindow;
 
 	void loadPdfList();
 };

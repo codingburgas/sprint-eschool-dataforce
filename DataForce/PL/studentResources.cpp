@@ -4,9 +4,10 @@
 StudentResources::StudentResources(QWidget *parent) : QMainWindow(parent), ui(new Ui::StudentResourcesClass())
 {
 	ui->setupUi(this);
+    menuWindow = parent;
 
     connect(ui->openResourceButton, &QPushButton::clicked, this, &StudentResources::openResource);
-    connect(ui->logoutButton, &QPushButton::clicked, this, &StudentResources::logout);
+    connect(ui->backButton, &QPushButton::clicked, this, &StudentResources::onBackButtonClicked);
     
     loadPdfList();
 }
@@ -45,10 +46,8 @@ void StudentResources::openResource()
     }
 }
 
-void StudentResources::logout()
+void StudentResources::onBackButtonClicked()
 {
-    Login* loginWindow = new Login();
-    loginWindow->show();
-
-    this->close();
+    this->hide();
+    menuWindow->show();
 }
