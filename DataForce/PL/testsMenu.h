@@ -8,6 +8,7 @@
 #include "teacherTestWindow.h"
 #include "studentTestWindow.h"
 #include <QGridLayout>
+#include <QInputDialog>
 
 class TestsMenu : public QMainWindow
 {
@@ -21,6 +22,7 @@ private slots:
 	void loadTests();
 	void openTest(int testId);
 	void onBackButtonClicked();
+	void addTest();
 		
 
 private:

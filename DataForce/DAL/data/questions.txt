@@ -1,7 +1,81 @@
 QuestionId,TestId,Text,OptionA,OptionB,OptionC,OptionD,CorrectAnswer
-1,1,What is the capital of France?,Berlin,Madrid,Paris,Rome,C
-2,1,2 + 2 = ?,3,4,5,6,B
-3,2,Question here,Option A,Option B,Option C,Option D,A
-4,2,Question 2,Option Aad,Option B,Option Cd,Option D,A
-5,2,Question 12312312,Option A,Option B,Option C,Option D,A
-6,1,Question,Option A,Option B,Option C,Option D,A
+1,1,Which of the these isn't a noble gas?,Neon,Argon,Krypton,Oxygen,D
+2,1,What is 9 x 8?,56,64,72,81,C
+3,2,What is the chemical symbol for gold?,Ag,Au,Pb,Fe,B
+4,2,What is the pH value of pure water?,5,7,8,12,B
+5,2,Which gas is most abundant in Earth?,Oxygen,Carbon dioxide,Nitrogen,Nytrogen,C
+7,1,What is 40 ÷ 5 + 3 × 2?,22,4,14,43,C
+8,1, What is the area of a circle with r=7?,14π,7π,21π,49π,D
+9,1,What is 12²?,24,133,21,144,D
+10,1,Solve for x: 2x + 6 = 18,x = 12,x = 1,x = 6,x = 0,C
+11,1,What is 25% of 80?,25,20,15,4,B
+12,1,Train travels 90km in 1.5hrs. Speed?,60 km/h,140 km/h,70 km/h,90 km/h,A
+13,1,if 5 pens = 15$ how much are 8 pens?,28$,27$,24$,26$,C
+14,1,What is the square root of 729?,31,27,23,33,B
+15,2,What is the chemical formula of salt?,NaCl,KCl,HCl,NaOH,A
+16,2,Element with highest atom number is:,Uranium,Helium,Oganesson,Radon,C
+17,2,What is the atomic number of carbon?,4,6,12,8,B
+18,2,What is the chemical symbol for water?,H₂O,CO₂,O₂,N₂,A
+19,2,What is the boiling point of water?,90°C,100°C,110°C,120°C,B
+20,2,What is the symbol for potassium?,K,Po,S,P,A
+22,4,What is the basic unit of life?,Cell,Tissue,Organ,Organism,A
+23,4,Which organ pumps blood?,Brain,Heart,Lungs,Stomach,B
+24,4,What pigment gives plants their color?,Chlorophyll,Melanin,Hemoglobin,Carotene,A
+25,4,What process do plants use for food?,Respiration,Digestion,Photosynthesis,Transpiration,C
+26,4,What controls cell activities?,Nucleus,Mitochondria,Ribosome,Golgi,A
+27,4,Which system controls movement?,Nervous,Digestive,Respiratory,Circulatory,A
+28,4,What is the powerhouse of the cell?,Nucleus,Mitochondria,Ribosome,Endoplasmic,B
+29,4,What is the largest organ?,Heart,Skin,Liver,Brain,B
+30,4,What carries genetic information?,RNA,Protein,Lipid,DNA,D
+31,4,Which organ produces insulin?,Stomach,Liver,Pancreas,Kidney,C
+32,5,What is the plural of "child"?,Childs,Children,Childrens,Childes,B
+33,5,Which word is an adjective?,Run,Quickly,Jump,Happy,D
+34,5,What is the past tense of "go"?,went,gone,going,go,A
+35,5,What is the synonym of "fast"?,slow,loud,quick,smart,C
+36,5,Which word is a preposition?,under,quickly,run,green,A
+37,5,What is the opposite of "happy"?,excited,angry,sad,funny,C
+38,5,Which word is a conjunction?,and,car,tree,slowly,A
+39,5,What is the plural of "mouse"?,mouse,mice,mouses,mices,B
+40,5,What is the past tense of "eat"?,eaten,ate,eated,eats,B
+41,5,Which word is a noun?,beautiful,swim,slowly,book,D
+42,6,Who wrote "Under the Yoke"?,Ivan Vazov,Aleko Konstantinov,Hristo Botev,Elin Pelin,A
+43,6,Who is the author of "Bay Ganyo"?,Ivan Vazov,Aleko Konstantinov,Dimitar Dimov,Elin Pelin,B
+44,6,Which novel is written by Elin Pelin?,Under the Yoke,The Outsider,The Old House,The House,C
+45,6,Who wrote "The Captain’s Daughter"?,Ivan Vazov,Nikolai Gogol,Aleksandr Pushkin,Anton Chekhov,C
+46,6,Who wrote "The Death of Ivan Illich"?,Dostoevski,Leo Tolstoy,Anton Chekhov,Aleksandr Solzhenitsyn,B
+47,6,Who wrote the novel "Tobacco"?,Elin Pelin,Dimitar Dimov, Ivan Vazov,Hristo Botev,B
+48,6,What genre is "Bay Ganyo"?,Drama,Novel,Poem,Short story,B
+49,6,Who wrote "Zelenka"?,Ivan Vazov,Elin Pelin,Pencho Slaveykov,Dimitar Dimov,B
+50,6,Who wrote "The Stranger"?,Anton Chekhov,Ivan Vazov,Dimitar Dimov,Nikolai Gumilyov,C
+51,6,What type of work is "The Madman"?,Novel,Poem,Play,Short story,D
+52,7,First Bulgarian Empire is founded in?,1018,681,501,1204,B
+53,7,Who was the first ruler of Bulgaria?,Tsar Simeon I,Tsar Boris I,Khan Asparuh,Tsar Kaloyan,C
+54,7,Who led the 1185 revolt?,Tsar Kaloyan,Asen and Peter,Khan Omurtag,Tsar Boris I,B
+55,7,Who converted Bulgaria to Christianity,Tsar Simeon I,Tsar Boris I,Khan Asparuh,Tsar Kaloyan,B
+56,7,Which battle did Bulgaria win in 1014?,Pliska,Kleidon,Sofia,Varna,B
+57,7,Who was the last  Tsar of Bulgaria?,Tsar Ferdinand ,Tsar Boris III,Tsar Simeon II,Tsar Ivan Asen II,C
+58,7,When did Bulgaria gain independence?,1878,1908,1946,1944,B
+59,7,In which year was the Battle of  Varna?,1350,1389,1492,1444,D
+60,7,When did Bulgaria join the EU?,2004,2007,2015,2010,B
+61,7,Which Tsar fought the Byzantines?,Tsar Kaloyan,Tsar Samuil,Tsar Ivan Asen II,Tsar Boris I,B
+62,8,What is the largest continent by area?,Africa,Asia,Antarctica,North America,B
+63,8,Which is the longest river in the world?,Amazon,Yangtze,Nile,Mississipi,C
+64,8,What is the capital of Australia?,Sydney,Melbourne,Canberra,Perth,C
+65,8,Which is the largest desert in the world,Gobi,Kalahari,Antarctic,Sahara,C
+66,8,Which ocean is the largest?,Atlantic,Indian,Arctic,Pacific,D
+67,8,What is the capital of Canada?,Toronto,Vancouver,Ottawa,Montreal,C
+68,8,Smallest country by area?,Monaco,Vatican City,Liechtenstein,San Marino,B
+69,8,Amazon Rainforest is in?,Brazil,Argentina,Colombia,Peru,A
+70,8,Great Barrier Reef is in?,Indonesia,Australia,India,Philippines,B
+71,8,Mount Everest is in?,Andes,Rockies,Himalayas,Alps,C
+72,3,What is the unit of force,Newton,Pascal,Joule,Watt,A
+73,3, What is the speed of light in a vacuum?,3.000.000 m/s,30.000.000 m/s,300.000 m/s,300.000.000 m/s,D
+74,3,What is the unit of electric current?,Volt,Ampere,Ohm,Watt,B
+75,3,Which of the following is a conductor?,Wood,Glass,Copper,Rubber,C
+76,3,What is the formula for kinetic energy?,m × v²,1/2 x m × v²,m × v,1/2 × m × v,B
+77,3,Who discovered the law of gravity?,Einstein,Galileo,Newton,Kepler,C
+78,3,Which of these is a form of energy?,Mass,Force,Power,Heat,D
+79,3,What is the formula for Ohm's Law?,V = I × R,V = R × I²,V = R / I,V = I / R,A
+80,3,What is the standard unit of mass?,Gram,Pound,Kilogram,Newton,A
+81,3,What type of wave is light?,Longitudinal,Transverse,Mechanical,Electromagnetic,A
+82,2,Chemical symbol for sodium?,Na,S,N,So,A

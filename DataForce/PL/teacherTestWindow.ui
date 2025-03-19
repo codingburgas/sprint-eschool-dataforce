@@ -128,11 +128,6 @@ font: 12pt &quot;Segoe UI&quot;;</string>
      <string>D</string>
     </property>
    </item>
-   <item>
-    <property name="text">
-     <string>F</string>
-    </property>
-   </item>
   </widget>
   <widget class="QPushButton" name="addButton">
    <property name="geometry">
@@ -218,7 +213,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
    <property name="font">
     <font>
      <family>Rockwell</family>
-     <pointsize>12</pointsize>
+     <pointsize>11</pointsize>
      <italic>false</italic>
      <bold>true</bold>
     </font>
@@ -231,10 +226,10 @@ color: rgb(0, 0, 0);</string>
     <string/>
    </property>
    <property name="text">
-    <string>Question</string>
+    <string/>
    </property>
    <property name="maxLength">
-    <number>32767</number>
+    <number>40</number>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -261,6 +256,9 @@ color: rgb(0, 0, 0);</string>
    <property name="text">
     <string>  C:</string>
    </property>
+   <property name="maxLength">
+    <number>27</number>
+   </property>
   </widget>
   <widget class="QLineEdit" name="optionD">
    <property name="geometry">
@@ -282,6 +280,9 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>  D: </string>
+   </property>
+   <property name="maxLength">
+    <number>27</number>
    </property>
   </widget>
   <widget class="QLineEdit" name="optionB">
@@ -309,7 +310,7 @@ color: rgb(0, 0, 0);</string>
     <string>  B:</string>
    </property>
    <property name="maxLength">
-    <number>32767</number>
+    <number>27</number>
    </property>
   </widget>
   <widget class="QLineEdit" name="optionA">
@@ -332,6 +333,9 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>  A:</string>
+   </property>
+   <property name="maxLength">
+    <number>27</number>
    </property>
   </widget>
  </widget>

@@ -25,13 +25,15 @@ void TeacherTestWindow::setTest(int id)
     loadQuestions();
 }
 
-void TeacherTestWindow::loadQuestions()
+void TeacherTestWindow::loadQuestions(int question)
 {
     this->questions = QuestionService::getQuestionsByTest(testId);
 
+    qDebug() << questions.count();
+
     if (!questions.isEmpty())
     {
-        currentQuestion = 0;
+        currentQuestion = question;
         loadQuestion(questions[currentQuestion].QuestionId);
     }
 }
@@ -105,17 +107,19 @@ void TeacherTestWindow::saveQuestion()
     q.CorrectAnswer = ui->correctAnswer->currentText();
 
     QuestionService::updateQuestion(q);
+
+    loadQuestions(currentQuestion);
 }
 
 void TeacherTestWindow::addQuestion()
 {
     Question newQuestion;
     newQuestion.TestId = testId;
-    newQuestion.Text = "Question";
-    newQuestion.OptionA = "Option A";
-    newQuestion.OptionB = "Option B";
-    newQuestion.OptionC = "Option C";
-    newQuestion.OptionD = "Option D";
+    newQuestion.Text = "";
+    newQuestion.OptionA = "";
+    newQuestion.OptionB = "";
+    newQuestion.OptionC = "";
+    newQuestion.OptionD = "";
     newQuestion.CorrectAnswer = "A";
 
     QuestionService::addQuestion(newQuestion);

@@ -21,15 +21,14 @@ Test TestService::getTestById(int testId)
     }
 }
 
-void TestService::addTest(QString title)
+void TestService::addTest(Test test)
 {
     QVector<Test> tests = Test::readFromFile();
 
-    int newId = tests.size() + 1;
-    tests.append(Test(newId, title, 0, CurrentUser::teacherId));
+    tests.append(test);
     Test::writeToFile(tests);
 
-    qDebug() << "Test added: " << title;
+    qDebug() << "Test added: " << test.Title;
 }
 
 void TestService::editTest(int id, QString title)
@@ -66,4 +65,24 @@ void TestService::deleteTest(int id)
             return;
         }
     }
+}
+
+
+int TestService::getNextTestId()
+{
+    QVector<Test> tests = Test::readFromFile();
+
+    if (tests.isEmpty()) return 1;
+
+    int maxId = 0;
+
+    for (const Test& t : tests)
+    {
+        if (t.TestId > maxId)
+        {
+            maxId = t.TestId;
+        }
+    }
+
+    return maxId + 1;
 }

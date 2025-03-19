@@ -18,13 +18,12 @@ QVector<Test> Test::readFromFile()
             QString line = in.readLine();
             QStringList fields = line.split(",");
 
-            if (fields.size() == 4)
+            if (fields.size() == 3)
             {
                 Test test;
                 test.TestId = fields[0].toInt();
                 test.Title = fields[1];
-                test.QuestionCount = fields[2].toInt();
-                test.TeacherId = fields[3].toInt();
+                test.TeacherId = fields[2].toInt();
 
                 tests.push_back(test);
             }
@@ -42,13 +41,12 @@ void Test::writeToFile(QVector<Test> tests) {
 
     if (file.open(QIODevice::WriteOnly)) {
         QTextStream out(&file);
-        out << "TestId,Title,QuestionCount,TeacherId\n";
+        out << "TestId,Title,TeacherId\n";
 
         for (const Test& test : tests)
         {
             out << test.TestId << ","
                 << test.Title << ","
-                << test.QuestionCount << ","
                 << test.TeacherId << "\n";
         }
         file.close();

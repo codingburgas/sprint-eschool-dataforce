@@ -13,8 +13,14 @@ TestsMenu::TestsMenu(QWidget* parent) : QMainWindow(parent), ui(new Ui::TestsMen
 
     loadTests();
 
+    if (CurrentUser::role == "student")
+    {
+        ui->addButton->hide();
+    }
+
     connect(ui->backButton, &QPushButton::clicked, this, &TestsMenu::onBackButtonClicked);
     connect(ui->refreshButton, &QPushButton::clicked, this, &TestsMenu::loadTests);
+    connect(ui->addButton, &QPushButton::clicked, this, &TestsMenu::addTest);
 }
 
 TestsMenu::~TestsMenu()
@@ -113,4 +119,40 @@ void TestsMenu::onBackButtonClicked()
 {
     this->hide();
     menuWindow->show();
+}
+
+void TestsMenu::addTest()
+{
+    if (CurrentUser::role != "teacher")
+    {
+        QMessageBox::warning(this, "Access Denied", "Only teachers can create tests.");
+        return;
+    }
+
+    bool ok;
+    QString title = QInputDialog::getText(this, "New Test", "Enter test title:", QLineEdit::Normal, "", &ok);
+    if (!ok || title.isEmpty()) return;
+
+    Test newTest;
+    newTest.TestId = TestService::getNextTestId();
+    newTest.Title = title;
+    newTest.TeacherId = CurrentUser::teacherId;
+    
+    TestService::addTest(newTest);
+
+
+    Question question;
+
+    question.TestId = newTest.TestId;
+    question.Text = "Question";
+    question.OptionA = "Option A";
+    question.OptionB = "Option B";
+    question.OptionC = "Option C";
+    question.OptionD = "Option D";
+    question.CorrectAnswer = "A";
+
+    QuestionService::addQuestion(question);
+    
+    QMessageBox::information(this, "Success", "Test created successfully.");
+    loadTests();
 }

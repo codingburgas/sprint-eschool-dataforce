@@ -7,8 +7,9 @@
 class TestService {
 public:
     static QVector<Test> getAllTests();
-    static void addTest(QString title);
+    static void addTest(Test test);
     static void editTest(int id, QString title);
     static void deleteTest(int id);
     static Test getTestById(int testId);
+    static int getNextTestId();
 };

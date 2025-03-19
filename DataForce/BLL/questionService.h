@@ -9,4 +9,5 @@ public:
     static void addQuestion(Question question);
     static void deleteQuestion(int id);
     static void updateQuestion(Question question);
+    static int getNextQuestionId();
 };

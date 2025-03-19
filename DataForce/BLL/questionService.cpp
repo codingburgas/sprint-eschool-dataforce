@@ -21,7 +21,13 @@ void QuestionService::addQuestion(Question question)
 {
     QVector<Question> questions = Question::readFromFile();
 
-    int newId = questions.size() + 1;
+    question.OptionA.replace(",", ";");
+    question.OptionB.replace(",", ";");
+    question.OptionC.replace(",", ";");
+    question.OptionD.replace(",", ";");
+    question.CorrectAnswer.replace(",", ";");
+
+    int newId = getNextQuestionId();
     questions.append(Question(newId, question.TestId, question.Text, question.OptionA, question.OptionB, question.OptionC, question.OptionD, question.CorrectAnswer));
 
     Question::writeToFile(questions);
@@ -65,4 +71,23 @@ void QuestionService::deleteQuestion(int id)
             
         }
     }
+}
+
+int QuestionService::getNextQuestionId()
+{
+    QVector<Question> questions = Question::readFromFile();
+
+    if (questions.isEmpty()) return 1;
+
+    int maxId = 0;
+
+    for (const Question& q : questions)
+    {
+        if (q.QuestionId > maxId)
+        {
+            maxId = q.QuestionId;
+        }
+    }
+
+    return maxId + 1;
 }

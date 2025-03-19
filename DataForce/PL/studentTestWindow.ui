@@ -26,7 +26,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../../../../../sprint-eschool-dataforce - Repo/sprint-eschool-dataforce/DataForce/PL/images/menu_background.jpg</pixmap>
+    <pixmap>images/menu_background.jpg</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="title">
@@ -117,8 +117,14 @@ color: rgb(0, 0, 0);</string>
    <property name="text">
     <string>Question</string>
    </property>
+   <property name="textFormat">
+    <enum>Qt::TextFormat::AutoText</enum>
+   </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="optionD">

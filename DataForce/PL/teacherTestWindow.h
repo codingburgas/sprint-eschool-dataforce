@@ -34,6 +34,6 @@ private:
 	Test currentTest;
 	QVector<Question> questions;
 
-	void loadQuestions();
+	void loadQuestions(int question = 0);
 	void loadQuestion(int questionId);
 };
