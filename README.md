@@ -37,6 +37,10 @@ If you want to clone our repo locally you can paste the following command in you
 
 <pre>https://github.com/codingburgas/sprint-eschool-dataforce.git</pre>
 <hr>
+ -Documents<br>
+- <a href = "https://github.com/codingburgas/sprint-eschool-dataforce/blob/main/Documents/DataForce%20Presentation.pptx"> Presentation </a><br>
+- <a href = "https://github.com/codingburgas/sprint-eschool-dataforce/blob/main/Documents/DataForce%20Documenation.docx"> Documentation </a><br>
+<hr>
  -👩🏽‍💻👩🏽‍💻Our Team👩🏽‍💻🧑🏽‍💻<br>
 - <a href = "https://github.com/VMDamyanova23"> Valeria Damyanova </a> (Scrum trainer)<br>
 - <a href = "https://github.com/VVValchanova23"> Valeria Vulchanova </a> (Frontend Developer)<br>
